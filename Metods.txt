@@ -7,3 +7,27 @@ int Request (string massage)
     return result;
 }
 
+//Метод заполнения двумерного массива случайными числами
+void Fill2DArray(int[,] array)
+  {
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+     array[i, j] = new Random().Next(-10, 11);
+    }
+   }
+  }
+
+  //Метод вывода на экран двумерного массива
+  void Print2DArray(int[,] array)
+  {
+   for (int i = 0; i < array.GetLength(0); i++)
+   {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+     Console.Write(string.Format("{0,4} ", array[i, j]));
+    }
+    Console.WriteLine();
+   }
+  }
